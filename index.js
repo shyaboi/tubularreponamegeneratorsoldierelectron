@@ -90,7 +90,10 @@ $("input").keypress(function(event) {
 $("#genButton").click(function() {
   pword = $("#nameGen").val();
   namer(cap(pword));
-  var para = document.createElement("P");
+  var para = $(".menu");
+for (var i = 1; i <= list.length; i++) {
+    elementList[i].attr("id", "menu" + i);
+}
   // var butt = document.createElement(`DIV`);
   para.innerText = `${prefix} ` + cap(pword) + ` ${suffix}`;
   document.body.appendChild(para);
@@ -109,9 +112,11 @@ $("#genButton").click(function() {
 //   });
 
 function myFunction() {
-  // var copyText = document.getElementById("p");
+  var copyText = document.getElementById("p");
   console.log(this.pword)
-  // copyText.select();
+  console.log(copyText)
+
+
   // copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
   alert("Copied the text: ");
