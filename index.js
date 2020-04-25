@@ -59,6 +59,14 @@ repoNameSuffixArr = [
 
 ];
 
+function refresh() {
+  contents.reload()
+}
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
 // console.log(pword);
 var namer = function(pword) {
   prefix =
@@ -110,4 +118,5 @@ console.log(cop)
 //   // copyText.setSelectionRange(0, 99999)
 //   document.execCommand("copy");
 //   alert("Copied the text: " + copyText.value);
-}
+};
+
