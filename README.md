@@ -1,4 +1,4 @@
 
 
 # TubularRepoNameGeneratorSoldier
-homemade name generator
+homemade name generator ported to electron for win/osx/linux
