@@ -1,6 +1,24 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 require("electron-reload")(__dirname);
+// ./main.js
+const contextMenu = require('electron-context-menu');
+
+// Add an item to the context menu that appears only when you click on an image
+contextMenu({
+	prepend: (params, browserWindow) => [{
+		label: 'Rainbow',
+		// Only show it when right-clicking images
+		visible: params.mediaType === 'image'
+	}]
+});
+
+// Your code that starts a new application
+let win;
+(async () => {
+	await app.whenReady();
+	win = new BrowserWindow();
+})();
 
 function createWindow() {
   // Create the browser window.

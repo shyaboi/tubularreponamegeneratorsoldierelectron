@@ -91,12 +91,12 @@ $("#genButton").click(function() {
   pword = $("#nameGen").val();
   namer(cap(pword));
   var para = document.createElement("P");
-  var butt = document.createElement("BUTTON");
+  // var butt = document.createElement("BUTTON");
   para.innerText = `${prefix} ` + cap(pword) + ` ${suffix}`;
   document.body.appendChild(para);
   $(para).append(butt);
   var t = document.createTextNode("copy");
-  $(butt).append(`<button id="copyButt" onclick="myFunction()">copy</button>`);
+  // $(butt).append(`<button id="copyButt" onclick="myFunction()">copy</button>`);
   // console.log(pword);
   window.scrollTo(0, document.body.scrollHeight);
 

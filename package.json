@@ -24,6 +24,8 @@
     "electron-winstaller": "^4.0.0"
   },
   "dependencies": {
-    "electron-reload": "^1.5.0"
+    "electron-context-menu": "^1.0.0",
+    "electron-reload": "^1.5.0",
+    "remote": "^0.2.6"
   }
 }
