@@ -7,17 +7,38 @@ const contextMenu = require('electron-context-menu');
 // Add an item to the context menu that appears only when you click on an image
 contextMenu({
 	prepend: (params, browserWindow) => [{
-		label: 'Rainbow',
+    label: 'Rainbow',
+    
 		// Only show it when right-clicking images
 		visible: params.mediaType === 'image'
-	}]
+  },
+  {
+    role: "zoomIn"
+    // If you want to change the label "Zoom In"
+    // label: "Custom Zoom In Text"
+},
+{
+  role: "zoomOut"
+  // If you want to change the label "Zoom Out"
+  // label: "Custom Zoom Out Text"
+},
+{
+  role: "reload"
+  // If you want to change the label "Zoom Out"
+  // label: "Custom Zoom Out Text"
+},
+{
+  role: "selectAll"
+  // If you want to change the label "Zoom Out"
+  // label: "Custom Zoom Out Text"
+},
+]
 });
 
 // Your code that starts a new application
 let win;
 (async () => {
 	await app.whenReady();
-	win = new BrowserWindow();
 })();
 
 function createWindow() {

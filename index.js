@@ -91,16 +91,16 @@ $("#genButton").click(function() {
   pword = $("#nameGen").val();
   namer(cap(pword));
   var para = document.createElement("P");
-  // var butt = document.createElement("BUTTON");
+  // var butt = document.createElement(`DIV`);
   para.innerText = `${prefix} ` + cap(pword) + ` ${suffix}`;
   document.body.appendChild(para);
-  $(para).append(butt);
+  $(para).append(para);
   var t = document.createTextNode("copy");
-  // $(butt).append(`<button id="copyButt" onclick="myFunction()">copy</button>`);
+  $(para).append(`<button id="copyButt" onclick="myFunction()">copy</button>`);
   // console.log(pword);
   window.scrollTo(0, document.body.scrollHeight);
 
-  if ($("#nameGen").val() != "") $("#nameGen").val("");
+  // if ($("#nameGen").val() != "") $("#nameGen").val("");
   // console.log(this);
 });
 
@@ -109,14 +109,11 @@ $("#genButton").click(function() {
 //   });
 
 function myFunction() {
-  var copyText = this.document.body.innerText
-//   console.log(this.document.body.innerText);
-cop = copyText
-console.log(cop)
-//   alert(toString(String(copyText)))
-//   // copyText.select();
-//   // copyText.setSelectionRange(0, 99999)
-//   document.execCommand("copy");
-//   alert("Copied the text: " + copyText.value);
+  // var copyText = document.getElementById("p");
+  console.log(this.pword)
+  // copyText.select();
+  // copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: ");
 };
 
