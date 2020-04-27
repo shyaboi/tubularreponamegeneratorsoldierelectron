@@ -22,12 +22,10 @@ repoNamePrefixArr = [
   "Massive",
   "Hella",
   "Turbo",
-  'Supra',
-  'Sunset',
-  'Synth',
-  'Euphoric',
-
-
+  "Supra",
+  "Sunset",
+  "Synth",
+  "Euphoric",
 ];
 repoNameSuffixArr = [
   "Radness",
@@ -51,24 +49,22 @@ repoNameSuffixArr = [
   "Massiveness",
   "Meggedon",
   "Turbo",
-  'Supra',
-  'Sunset',
-  'Synth',
-  'Euphoria',
-  
-
+  "Supra",
+  "Sunset",
+  "Synth",
+  "Euphoria",
 ];
 
 function refresh() {
-  contents.reload()
+  contents.reload();
 }
-var x = document.getElementById("myAudio"); 
+var x = document.getElementById("myAudio");
 
-function playAudio() { 
-  x.play(); 
-} 
+function playAudio() {
+  x.play();
+}
 // console.log(pword);
-var namer = function(pword) {
+var namer = function (pword) {
   prefix =
     repoNamePrefixArr[Math.floor(Math.random() * repoNamePrefixArr.length)];
   suffix =
@@ -81,26 +77,24 @@ function cap(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-$("input").keypress(function(event) {
+$("input").keypress(function (event) {
   if (event.keyCode === 13) {
     $("#genButton").click();
   }
 });
 
-$("#genButton").click(function() {
+$("#genButton").click(function () {
   pword = $("#nameGen").val();
   namer(cap(pword));
-  var para = $(".menu");
-for (var i = 1; i <= list.length; i++) {
-    elementList[i].attr("id", "menu" + i);
-}
+  var para = document.createElement("P");
+
   // var butt = document.createElement(`DIV`);
   para.innerText = `${prefix} ` + cap(pword) + ` ${suffix}`;
-  document.body.appendChild(para);
-  $(para).append(para);
-  var t = document.createTextNode("copy");
+
   $(para).append(`<button id="copyButt" onclick="myFunction()">copy</button>`);
   // console.log(pword);
+  document.body.appendChild(para);
+
   window.scrollTo(0, document.body.scrollHeight);
 
   // if ($("#nameGen").val() != "") $("#nameGen").val("");
@@ -113,12 +107,10 @@ for (var i = 1; i <= list.length; i++) {
 
 function myFunction() {
   var copyText = document.getElementById("p");
-  console.log(this.pword)
-  console.log(copyText)
-
+  console.log(this.pword);
+  console.log(copyText);
 
   // copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
   alert("Copied the text: ");
-};
-
+}
