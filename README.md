@@ -1,7 +1,11 @@
 
 
 # TubularRepoNameGeneratorSoldier
-A homemade name generator ported to electron from https://shyaboi.github.io/TubularRepoNameGeneratorSoldier/ 
+A homemade name generator ported to electron from
+<br>
+https://shyaboi.github.io/TubularRepoNameGeneratorSoldier/ 
+<br>
+https://github.com/shyaboi/TubularRepoNameGeneratorSoldier
 <br>
 can install/make executable for win/osx/linux
 
