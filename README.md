@@ -1,7 +1,9 @@
 
 
 # TubularRepoNameGeneratorSoldier
-A homemade name generator ported to electron for win/osx/linux
+A homemade name generator ported to electron from https://shyaboi.github.io/TubularRepoNameGeneratorSoldier/ 
+<br>
+can install/make executable for win/osx/linux
 
 # Installation
 if repo is cloned, run $`npm install`, $`npm start`
